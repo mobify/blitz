@@ -3,6 +3,9 @@ var roomMap = {
         "yvr-womens" : {"name":"🚺 Women's Bathroom","max":3},
         "yvr-shower" : {"name":"🚿 Shower","max":1}
 };
+
+var roomList = {"yvr-womens":1,"yvr-mens":1,"yvr-shower":1};
+
 function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -23,7 +26,11 @@ if(roomSelected) {
     })
 } else {
     $.getJSON( "https://pushpush.herokuapp.com/api/v1/status/", function( data ) {
-        $.each( data, function( key, val ) {
+        $.each( data, function(key, val) {
+            roomList[key] = val;
+        });
+        $.each( roomList, function( key, val ) {
+
             $(".js-rooms").append('' +
                 '<article class="c-rooms_room">' +
                 '   <div class="c-grid">' +
@@ -55,8 +62,10 @@ if(roomSelected) {
 function startRefresh() {
     $.get('', function(data) {
         $.getJSON( "https://pushpush.herokuapp.com/api/v1/status/", function( data ) {
-            $.each( data, function( key, val ) {
-                console.log(key + " " + val)
+            $.each( data, function(key, val) {
+                roomList[key] = val;
+            });
+            $.each( roomList, function( key, val ) {
                 if(val === 1) {
                     $("." + key + "-num").replaceWith('' +
                         '           <p class="-color-free u-right ' + key + '-num">' + val + ' stall is free <i class="fa fa-check-circle"></i></p>');
