@@ -27,7 +27,7 @@ if(roomSelected) {
             $(".js-rooms").append('' +
                 '<article class="c-rooms_room">' +
                 '   <div class="c-grid">' +
-                '       <div class="c-grid_col -sm-1-2">' +
+                '       <div class="c-grid_col -md-1-2">' +
                 '           <h1 class="c-heading -level4">' + roomMap[key]['name'] + '</h1>' +
                 '       </div> ' +
                 '       <div class="c-grid_col -md-1-2 ' + key + '">' +
