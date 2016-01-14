@@ -1,0 +1,8 @@
+{
+  "globals": {
+    "site_title": "Blitz",
+    "meta_title": "Blitz",
+    "meta_subtitle": "Room Availabity + Alerts",
+    "meta_description": "No more waiting outside the stall for someone to leave, just check the room’s status in Slack and set your notifications to receive updates."
+  }
+}

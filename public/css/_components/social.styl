@@ -1,0 +1,65 @@
+// Social
+// ==============
+
+
+.c-social
+  display flex
+  flex-wrap wrap
+  margin-left 0
+  list-style none
+
+// Social > Item
+// --------------
+
+.c-social_item
+  flex 1 0 100%
+  @media screen and (min-width $screen-medium)
+    flex 1 0 50%
+  @media screen and (min-width $screen-large)
+    flex 1 0 25%
+  &.-linkedin
+    @media screen and (min-width $screen-medium)
+      order 1
+  &.-flickr
+    @media screen and (min-width $screen-medium)
+      order 2
+  &.-twitter
+    order 3
+    @media screen and (min-width $screen-medium)
+      order 4
+    @media screen and (min-width $screen-large)
+      order 3
+  &.-instagram
+    order 4
+    @media screen and (min-width $screen-medium)
+      order 3
+    @media screen and (min-width $screen-large)
+      order 4
+
+// Social > Link
+// --------------
+
+.c-social_link
+  display block
+  padding 2rem 0
+  background $grey-light
+  color $white
+  text-align center
+  &:hover
+    color $white
+  .-linkedin &
+    background rgb(0,123,181)
+    &:hover
+      background lighten(rgb(0,123,181), 8)
+  .-flickr &
+    background rgb(255,0,132)
+    &:hover
+      background lighten(rgb(255,0,132), 16)
+  .-twitter &
+    background rgb(0,172,237)
+    &:hover
+      background lighten(rgb(0,172,237), 8)
+  .-instagram &
+    background rgb(251,57,88)
+    &:hover
+      background lighten(rgb(251,57,88), 8)

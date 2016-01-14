@@ -1,0 +1,19 @@
+// overlay
+// ==============
+
+
+.c-overlay
+  display flex
+  align-items center
+  justify-content center
+  position absolute
+  top 0
+  width 100%
+  min-height 100%
+  background $white
+  visibility visible
+  z-index 10
+  transition z-index $instant linear 1s, opacity $slow linear $instant
+  body:not(.-is-loading) &
+    opacity 0
+    z-index -1

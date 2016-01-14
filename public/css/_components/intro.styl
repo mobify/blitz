@@ -1,0 +1,35 @@
+// Intro
+// ==============
+
+
+.c-intro
+  display flex
+  align-items flex-end
+  position relative
+  min-height calc(50vh - 10rem)
+  padding-top 3rem
+  padding-bottom 1rem
+  background $blue
+  color $white
+  flex 1 1 auto
+  animation 1.5s ease-in fadein
+  &::after
+    content ''
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    left 0
+    background-image url('/images/bg.png')
+    background-position center
+    background-size 300px 300px
+    opacity .25
+  a
+    color $blue-lighter
+    font-weight 400
+    box-shadow rgba(255,255,255,.25)
+    &:hover
+      color $blue-lightest
+  @media screen and (min-width $screen-large)
+    padding-top 6rem
+    padding-bottom 3rem

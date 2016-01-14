@@ -1,0 +1,19 @@
+// Spinner
+// ==============
+
+
+@keyframes spin
+  from
+    transform rotate(0deg)
+  to
+    transform rotate(360deg)
+
+.c-spinner
+  position relative
+  width 6rem
+  height 6rem
+  border .5rem solid $dark-10
+  border-left .5rem solid $dark-20
+  border-radius 50%
+  transform translateZ(0)
+  animation spin 1s infinite linear

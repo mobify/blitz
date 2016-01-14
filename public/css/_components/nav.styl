@@ -1,0 +1,42 @@
+// Nav
+// ==============
+
+
+.c-nav
+  font-size 2rem
+  @media screen and (min-width $screen-medium)
+    font-size 3rem
+
+
+// Nav > List
+// --------------
+
+.c-nav_list
+  margin 0
+
+
+// Nav > Item
+// --------------
+
+.c-nav_item
+  display inline-block
+  list-style none
+  &:not(:first-child)
+    margin-left 2rem
+    @media screen and (min-width $screen-medium)
+      margin-left 3rem
+    @media screen and (min-width $screen-large)
+      margin-left 4rem
+    // @media screen and (max-width $screen-medium)
+    //   margin-left 3rem
+
+
+// Nav > Link
+// --------------
+
+.c-nav_link
+  color $blue-lighter
+  &:hover
+    color $blue-lightest
+  &.-active
+    color $white

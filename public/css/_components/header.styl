@@ -1,0 +1,59 @@
+// Header
+// ==============
+
+
+.c-header
+  display flex
+  height 8rem
+  // background $white
+  z-index 1
+  @media screen and (min-width $screen-medium)
+    height 10rem
+  @media screen and (min-width $screen-large)
+    height 12rem
+
+
+// Header > Container
+// --------------
+
+.c-header_container
+  @extend .c-container
+  display flex
+  justify-content space-between
+  align-items center
+  padding-right 2rem
+  padding-left 2rem
+  @media screen and (min-width $screen-medium)
+    padding-right 4rem
+    padding-left 4rem
+  @media screen and (min-width $screen-large)
+    padding-right 6rem
+    padding-left 6rem
+  @media screen and (min-width $screen-xlarge)
+    width 150rem
+    margin 0 auto
+    padding-right 0
+    padding-left 0
+
+
+// Header > Heading
+// --------------
+
+.c-header_heading
+  margin 0
+  font-size 3rem
+  @media screen and (min-width $screen-medium)
+    font-size 4rem
+  @media screen and (min-width $screen-large)
+    font-size 5rem
+  @media screen and (min-width $screen-xlarge)
+    font-size 6rem
+
+
+// Header > Heading Link
+// --------------
+
+.c-header_heading-link
+  color $white
+  &:hover
+    color $blue-lighter

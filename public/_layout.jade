@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+    title= locals.title ? title + " | " + meta_title : meta_title + " | " + meta_subtitle
+    meta(name='description', content='#{ meta_description }')
+    link(rel='shortcut icon', href='/favicon.ico')
+    link(rel='stylesheet', href='/css/main.css')
+    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Open+Sans:400,700')
+    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Anonymous+Pro')
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+    script(src='//code.jquery.com/jquery-2.1.4.js')
+    script(src='/js/main.js')
+    script(src='/js/rooms.js')
+  body(class="p-#{ current.path[0] } -#{ current.path.join('-') } js-body -is-loading")
+    .c-overlay
+      .c-spinner
+    .c-wrapper.js-wrapper
+      header.c-header
+        .c-header_container
+          h1.c-header_heading
+            a.c-header_heading-link(href='/')= site_title
+          include ./_partials/nav
+      main.c-content
+        != yield
